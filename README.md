@@ -21,7 +21,6 @@ Following are some samples of the dataset
   </tr>
   <tr>
     <td>anger</td>
-    <td>contempt</td>
     <td>disgust</td>
     <td>fear</td>
     <td>happy</td>
