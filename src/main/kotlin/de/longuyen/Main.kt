@@ -4,6 +4,10 @@ import de.longuyen.data.BinaryClassificationDataReader
 import de.longuyen.svm.SVM
 import org.nd4j.linalg.api.buffer.DataType
 import org.nd4j.linalg.indexing.NDArrayIndex
+import java.awt.Color
+import java.awt.image.BufferedImage
+import java.io.File
+import javax.imageio.ImageIO
 
 fun main() {
     val reader = BinaryClassificationDataReader()
@@ -20,12 +24,38 @@ fun main() {
     for (i in 0 until 100) {
         svm.train(xTrain, yTrain)
         val yPrediction = svm.predict(xTest).castTo(DataType.INT32).toIntVector()
-        var accuracy = 0.0
+        var correct = 0.0
+        var wrong = 0.0
         for (j in yPrediction.indices) {
-            if (yPrediction[i] == yTest[i]) {
-                accuracy += 1.0
+            val prediction = yPrediction[i]
+            val truth = yTest[i]
+            if (prediction != truth) {
+                wrong += 1.0
+            } else {
+                correct += 1.0
             }
         }
-        println(accuracy / yPrediction.size.toDouble())
+    }
+    if(!File("target/prediction-happy").exists()){
+        File("target/prediction-happy").mkdir()
+    }
+    if(!File("target/prediction-surprised").exists()){
+        File("target/prediction-surprised").mkdir()
+    }
+    val yPrediction = svm.predict(xTest).castTo(DataType.INT32).toIntVector()
+    val images = xTest.mul(255f).castTo(DataType.INT32)
+    for (i in yPrediction.indices) {
+        val image = images.get(NDArrayIndex.interval(i, i + 1)).reshape(intArrayOf(48, 48)).transpose().toIntMatrix()
+        val bufferedImage = BufferedImage(48, 48, BufferedImage.TYPE_INT_RGB)
+        for (y in 0 until 48) {
+            for (x in 0 until 48) {
+                bufferedImage.setRGB(x, y, Color(image[y][x], image[y][x], image[y][x]).rgb)
+            }
+        }
+        if (yPrediction[i] == 1) {
+            ImageIO.write(bufferedImage, "png", File("target/prediction-happy/$i.png"))
+        } else {
+            ImageIO.write(bufferedImage, "png", File("target/prediction-surprised/$i.png"))
+        }
     }
 }

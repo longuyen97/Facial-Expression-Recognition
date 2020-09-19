@@ -13,6 +13,32 @@ Statistical Machine Learning) to filter unimportant features and finding importa
 
 ## Results
 
+Using soft-margin classifier to differentiate happy and surprised faces results an accuracy of 100% (which is not difficult but also not easy to achieve).
+
+Happy faces
+
+<table style="width:100%">
+  <tr>
+    <td><img src="data/prediction-happy/0.png"></td>
+    <td><img src="data/prediction-happy/20.png"></td>
+    <td><img src="data/prediction-happy/21.png"></td>
+    <td><img src="data/prediction-happy/23.png"></td>
+    <td><img src="data/prediction-happy/25.png"></td>
+  </tr>
+</table>
+
+Surprised faces
+
+<table style="width:100%">
+  <tr>
+    <td><img src="data/prediction-surprised/1.png"></td>
+    <td><img src="data/prediction-surprised/2.png"></td>
+    <td><img src="data/prediction-surprised/4.png"></td>
+    <td><img src="data/prediction-surprised/7.png"></td>
+    <td><img src="data/prediction-surprised/9.png"></td>
+  </tr>
+</table>
+
 ## Datasets
 
 [CKPLUS](https://www.kaggle.com/shawon10/ckplus) is a lite version of Google's [facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/).
