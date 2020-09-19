@@ -56,7 +56,9 @@ does a really good job explain the naive classifier variation. The idea of Hard 
 optimal hyperplane with the largest distance to both classes. The ideal hyperplane in this case has the same distance between
 all two classes; the greatest distance gives the algorithm its robustness against outliers.   
 
+<div align="center">
 <img src="data/hard-margins.png" height="400px" align="center">
+</div>
 
 Assuming the data can be perfectly separated by an ideal hyperplane, then the classifier can take the linear form
 
@@ -89,7 +91,9 @@ subject to Yi(<w, Xi> + b) >= 1 for all i = 1,...,n
 The hard margin may be too strict for data that is not linear separable. In this case we want to allow the separating
 hyperplane to make some errors (sacrifice a low bias for a low variance). 
 
+<div align="center">
 <img src="data/hard-and-soft-margins.png" height="400px" align="center">
+</div>
 
 The optimization problem for this hyperplane can be formulated as following where `C` is a constant that controls the tradeoff between two terms:
 
