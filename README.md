@@ -31,12 +31,24 @@ The margin of an arbitrary hyperplane H is defined as the minimal distance of al
 p(H, x1,..., xn) = min{1,..,n} d(xi, H)
 ```
 
-Finally, the formulation of the hard margin optimization problem is to maximize the margin (assuming all points 
-are on the correct side of the hyperplane and outside of the margin). 
+Therefore, the formulation of the hard margin optimization problem is to maximize the margin (assuming all points 
+are on the correct side of the hyperplane and outside of the margin) or 
+
+```
+minimize{w, b} 1/2 ||w|| ^ 2
+subject to Yi(<w, Xi> + b) >= 1 for all i = 1,...,n
+``` 
 
 ##### Soft Margin Classifier 
 
-##### Polynomial Kernel
+The hard margin may be too strict for data that is not linear separable. In this case we want to allow the separating
+hyperplane to make some errors (sacrifice a low bias for a low variance). The optimization problem for this hyperplane 
+can be formulated as:
+
+```
+minimize{x, b, slack} 1 / 2 ||w|| ^ 2 + C/n sum{i} slack{i}
+subject to Yi(<w, Xi> + b) >= 1 - slack{i} for all i = 1,..., n 
+```
 
 ### Features reduction
 
@@ -51,6 +63,27 @@ are on the correct side of the hyperplane and outside of the margin).
 This dataset is a large-scale facial expression dataset consisting of face image triplets along with human annotations that specify which two faces in each triplet form the most similar pair in terms of facial expression. Each triplet in this dataset was annotated by six or more human raters. This dataset is quite different from existing expression datasets that focus mainly on discrete emotion classification or action unit detection.
 
 This dataset is intended to aid researchers working on topics related to facial expression analysis such as expression-based image retrieval, expression-based photo album summarization, emotion classification, expression synthesis, etc.
+
+<table style="width:100%">
+  <tr>
+    <th>anger</th>
+    <th>contempt</th>
+    <th>disgust</th>
+    <th>fear</th>
+    <th>happy</th>
+    <th>sadness</th>
+    <th>surprise</th>
+  </tr>
+  <tr>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+  </tr>
+</table>
 
 ### References
 - [Google facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/)
