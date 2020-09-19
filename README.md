@@ -1,14 +1,18 @@
 # Facial Expression Recognition
 
-### Roadmap
-- [ ] Binary classification with linear Support Vector Machines
-- [ ] Categorical classification with linear Support Vector Machines
-- [ ] Dimensional reduction with Principal Component Analysis
-- [ ] Classification with Kernel Machines
+### Targets classification
 
-### Support vector machine
+##### Maximal Margin Classifier
 
-### Principal component Analysis
+##### Soft Margin Classifier / Support Vector Classifier
+
+##### Support Vector Machines with Polynomial Kernel
+
+### Features reduction
+
+##### K-Mean clustering
+
+##### Principal Component Analysis
 
 ### Datasets
 
@@ -21,12 +25,7 @@ This dataset is intended to aid researchers working on topics related to facial 
 ### References
 - [Google facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/)
 - [CKPLUS](https://www.kaggle.com/shawon10/ckplus)
-- [Facial expression recognition](https://github.com/zfjmike/facial_expression_recognition/blob/master/FML-FA18-Project-fz758-lc3909-ys3547.pdf)
 - [Wikipedia - Support vector machines](https://de.wikipedia.org/wiki/Support_Vector_Machine)
-- [Support Vector Machines, Clearly Explained!!!](https://www.youtube.com/watch?v=efR1C6CvhmE&ab_channel=StatQuestwithJoshStarmer)
-- [Support Vector Machine (SVM) - Fun and Easy Machine Learning](https://www.youtube.com/watch?v=Y6RRHw9uN9o&ab_channel=AugmentedStartups)
-- [StatQuest: PCA main ideas in only 5 minutes!!!](https://www.youtube.com/watch?v=HMOI_lkzW08&ab_channel=StatQuestwithJoshStarmer)
-- [How to Calculate Principal Component Analysis (PCA) from Scratch in Python](https://machinelearningmastery.com/calculate-principal-component-analysis-scratch-python/)
-- [SVM From Scratch](https://towardsdatascience.com/svm-implementation-from-scratch-python-2db2fc52e5c2)
-- [LMU - Support Vector Machines](https://www.dbs.ifi.lmu.de/Lehre/KDD/WS1011/skript/kdd-3-klassifikation7.pdf)
-- [R. Berwick - An idiot's guide to Support Vector Machines](http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf)
+- [StatQuest: Support Vector Machines, Clearly Explained!!!](https://www.youtube.com/watch?v=efR1C6CvhmE)
+- [StatQuest: Support Vector Machines: The Polynomial Kernel](https://www.youtube.com/watch?v=Toet3EiSFcM)
+- [StatQuest: PCA main ideas](https://www.youtube.com/watch?v=HMOI_lkzW08)
