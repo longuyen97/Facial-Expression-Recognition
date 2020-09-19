@@ -1,6 +1,6 @@
 # Facial Expression Recognition
 
-### Datasets
+## Datasets
 
 [CKPLUS](https://www.kaggle.com/shawon10/ckplus) is a lite version of Google's [facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/).
 
@@ -29,13 +29,13 @@ Following are some samples of the dataset
   </tr>
 </table>
 
-### Implementation details
+## Implementation details
 
 Assuming we want to classify images between two targets `happy` and `anger`. Assigning images of `happy`with target 1 as well 
 as assigning images of `anger` with target -1. Each pixel of a `48x48` images will be an attribute. An image therefore 
 will be a vector `xi` in a vector space `R^2304`. The task of the algorithm is assigning `xi` with either -1 or 1.  
 
-##### Hard Margin Classifier 
+#### Hard Margin Classifier 
 
 The course [Statistical Machine Learning](https://www.youtube.com/watch?v=0cZwSzsE-UA&list=PL05umP7R6ij2XCvrRzLokX6EoHWaGA2cC&index=18) of University Tübingen 
 does a really good job explain the naive classifier variation. The idea of Hard Margin Classifier is to search for the 
@@ -68,22 +68,26 @@ minimize{w, b} 1/2 ||w|| ^ 2
 subject to Yi(<w, Xi> + b) >= 1 for all i = 1,...,n
 ``` 
 
-##### Soft Margin Classifier 
+#### Soft Margin Classifier 
 
 The hard margin may be too strict for data that is not linear separable. In this case we want to allow the separating
 hyperplane to make some errors (sacrifice a low bias for a low variance). The optimization problem for this hyperplane 
-can be formulated as:
+can be formulated as following where `C` is a constant that controls the tradeoff between two terms:
 
 ```
 minimize{x, b, slack} 1 / 2 ||w|| ^ 2 + C/n sum{i} slack{i}
 subject to Yi(<w, Xi> + b) >= 1 - slack{i} for all i = 1,..., n 
 ```
 
-### Features reduction
+The slack variable is supposed to measure how far a variable is sitting on the wrong side 
+of the hyperplane and will be used as a regularisation term of the optimization problem. A good hyperplane is where the 
+sum of the punishments is as small as possible.  
 
-##### K-Mean clustering
+#### Kernel methods
 
-##### Principal Component Analysis
+## Features reduction
+
+#### Principal Component Analysis
 
 ### References
 - [Google facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/)
