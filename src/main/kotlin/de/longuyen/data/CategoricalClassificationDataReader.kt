@@ -11,4 +11,7 @@ class CategoricalClassificationDataReader  : DataReader{
         TODO("Not yet implemented")
     }
 
+    override fun shuffle() {
+        TODO("Not yet implemented")
+    }
 }
