@@ -56,7 +56,7 @@ does a really good job explain the naive classifier variation. The idea of Hard 
 optimal hyperplane with the largest distance to both classes. The ideal hyperplane in this case has the same distance between
 all two classes; the greatest distance gives the algorithm its robustness against outliers.   
 
-<img src="data/hard-margins.png" height="400" align="center">
+<img src="data/hard-margins.png" height="400px" align="center">
 
 Assuming the data can be perfectly separated by an ideal hyperplane, then the classifier can take the linear form
 
