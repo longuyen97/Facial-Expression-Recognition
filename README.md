@@ -87,8 +87,11 @@ subject to Yi(<w, Xi> + b) >= 1 for all i = 1,...,n
 #### Soft Margin Classifier 
 
 The hard margin may be too strict for data that is not linear separable. In this case we want to allow the separating
-hyperplane to make some errors (sacrifice a low bias for a low variance). The optimization problem for this hyperplane 
-can be formulated as following where `C` is a constant that controls the tradeoff between two terms:
+hyperplane to make some errors (sacrifice a low bias for a low variance). 
+
+<img src="data/hard-and-soft-margins.png" height="400px" align="center">
+
+The optimization problem for this hyperplane can be formulated as following where `C` is a constant that controls the tradeoff between two terms:
 
 ```
 minimize{x, b, slack} 1 / 2 ||w|| ^ 2 + C/n sum{i} slack{i}
