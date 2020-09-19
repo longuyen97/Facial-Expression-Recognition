@@ -1,5 +1,11 @@
 # Facial Expression Recognition
 
+### Roadmap
+- [ ] Binary classification with linear Support Vector Machines
+- [ ] Categorical classification with linear Support Vector Machines
+- [ ] Dimensional reduction with Principal Component Analysis
+- [ ] Classification with Kernel Machines
+
 ### Support vector machine
 
 ### Principal component Analysis
