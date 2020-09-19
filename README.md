@@ -19,11 +19,24 @@ Assuming the data can be perfectly separated by an ideal hyperplane, then the cl
 f(x) = sign(<w, x> + b)
 ```
 
-We say the pair `(w, b)` is in canonical form with respect to the 
- 
-#### Soft Margin Classifier 
+The canonical form of the hyperplane consequently takes the form
 
-##### Support Vector Machines with Polynomial Kernel
+```
+<w, x> + b = 0
+```
+
+The margin of an arbitrary hyperplane H is defined as the minimal distance of all training points to the hyperplane.
+
+```
+p(H, x1,..., xn) = min{1,..,n} d(xi, H)
+```
+
+Finally, the formulation of the hard margin optimization problem is to maximize the margin (assuming all points 
+are on the correct side of the hyperplane and outside of the margin). 
+
+##### Soft Margin Classifier 
+
+##### Polynomial Kernel
 
 ### Features reduction
 
