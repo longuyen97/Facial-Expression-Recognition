@@ -1,21 +1,15 @@
 # Facial Expression Recognition
 
 Facial expressions are a form of nonverbal communication between human beings. While we can choose our words very carefully 
-to avoid involuntary emotions revealing, it could be difficult to control our facial expressions. 
-
-For a long time (and still), it is considered very difficult for machines to classify the emotions displayed on human faces. Many
-approaches were tested (with and without significant success) to extract the facial expression and gather them into categories. A successful
-automation of this problem could lead to many applications in human-computer interaction to improve the fluency, accuracy and naturalness 
-of the interactions.
-
-This repository is an attempt to employ Support Vector Machines and Principal Component Analysis (both come from the field of 
-Statistical Machine Learning) to filter unimportant features and finding important patterns in RGB images of human faces.
+to avoid involuntary emotions revealing, it could be difficult to control our facial expressions. This repository is an attempt to employ 
+Support Vector Machines and Principal Component Analysis (both come from the field of Statistical Machine Learning) to filter unimportant 
+features and finding important patterns in RGB images of human faces for expression recognition purpose.
 
 ## Results
 
-Using soft-margin classifier to differentiate happy and surprised faces results an accuracy of 100% (which is not difficult but also not easy to achieve).
+Using soft-margin classifier to differentiate happy and surprised faces results an accuracy of 100% (which is not difficult but also not easy to achieve). 
 
-Happy faces
+Prediction of happy faces:
 
 <table style="width:100%">
   <tr>
@@ -32,7 +26,9 @@ Happy faces
   </tr>
 </table>
 
-Surprised faces
+---
+
+Prediction of surprised faces:
 
 <table style="width:100%">
   <tr>
