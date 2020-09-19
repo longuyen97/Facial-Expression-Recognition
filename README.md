@@ -106,17 +106,49 @@ The slack variable is supposed to measure how far a variable is sitting on the w
 of the hyperplane and will be used as a regularisation term of the optimization problem. A good hyperplane is where the 
 sum of the punishments is as small as possible.  
 
-#### Polynomial kernel for non-linear modelling
+#### Kernels for non-linear modelling
 
 Soft margin classifier is an initial step into the right direction, however the linear functions are general still too 
 restrictive despite simple conceptual appeal. In reality this lead normally to underfitting the dataset and missing out 
 very much potential of performance. 
 
-In order to overcome this problem, we could use a feature map with basis functions to represent more complex functions, say
-polynomials. But:
-- It is not so obvious which are good basis functions
-- We need to fix the basis before we see the data. This means that we need to have very many basis functions to be flexible, this 
-leads to a very high dimensional representations of our data. 
+At this moment, the idea of Kernel comes to rescue. With a kernel function we want to embed given points in some abstract space
+`X` into some space `R^d` via a feature map `phi`. In that space, we use a linear method like an SVM, ideally we never
+compute the embedding directly, instead we want to use a kernel function to compute: 
+ 
+```
+k(x, y) = <phi(x), phi(y)>
+```
+
+The core question is: How do the functions k need to look like? An easy intuition for the function k would be the 
+measure of how similar two points (x, y) in the feature space are. In the praxis, we commonly find the following kernels:
+
+- Linear Kernel: This trivial kernel on `R^d` defined by the standard scalar product:
+
+```
+k: R^d x R^d -> R
+k(x, y) = <x, y>
+```
+
+- Cosine Similarity: Points are similar if the corresponding vectors "point to the same direction". Cosine approximates 1 
+means points agree, cosine approximate 0 means points are orthogonal. 
+
+- Gaussian Kernel (also called radial basis function): Two points are considered very similar if they are of distance at most `sigma`, 
+somewhat similar if they are distance of 3 `sigma` and pretty dissimilar if they are further.
+
+```
+k: R^d x R^d -> R, k(x, y) = exp(-||x -y||^2 / 2 * sigma ^ 2)   
+```
+
+- Polynomial Kernel: Essential not very useful for practice, but often mentioned in textbooks
+
+```
+k(x, y) = (x'y + c)^k where c > 0 and k is a natural number
+```
+
+<div align="center">
+<img src="data/polynomial-kernel.png" height="400px" align="center">
+</div>
 
 #### Principal Component Analysis
 
