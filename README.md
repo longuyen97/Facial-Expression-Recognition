@@ -11,6 +11,8 @@ of the interactions.
 This repository is an attempt to employ Support Vector Machines and Principal Component Analysis (both come from the field of 
 Statistical Machine Learning) to filter unimportant features and finding important patterns in RGB images of human faces.
 
+## Results
+
 ## Datasets
 
 [CKPLUS](https://www.kaggle.com/shawon10/ckplus) is a lite version of Google's [facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/).
