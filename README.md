@@ -150,7 +150,43 @@ k(x, y) = (x'y + c)^k where c > 0 and k is a natural number
 <img src="data/polynomial-kernel.png" height="400px" align="center">
 </div>
 
-#### Principal Component Analysis
+#### Principal Component Analysis (PCA)
+
+PCA is a traditional method for unsupervised dimensionality reduction, based on linear principles. THe goal is to 
+reduce the dimensionality of the data by throwing away dimensions which are not important. This can be done by (simply said)
+projecting data in every dimension (reduction) and keep the ones with the most variance.
+
+By projection, we talk about linear mapping P: E -> E between vectors spaces for P^2 = P (Applying the linear mapping twice
+should have the same effect as applying the linear mapping once). The certain kind of projection we are interested in is
+orthogonal projection: 
+
+```
+nullspace(P) orthogonal to image(P)
+```
+
+Since projection is the bread and butter of PCA, we can formalize a projection of a d-dimensional data point into a 
+l-dimensional subspace by defining Matrix `V` with `v1,...,vl` as columns and compute the low dimensional representation as:
+
+```
+projection: R^d -> R, x -> V.T * x
+```
+
+The core problem of PCA therefore can be reduced to finding `V` or in other words, the projection on an affine subspace S such that the 
+variance of the projected points is maximized: ```max{S} Var{l}(Projection(X))```. The algorithm for this problem is well-known 
+and can be formulated as:
+
+Input: Data points `x1,...,xn` belonging to  `R^d`, parameter l <= d:
+- Center the data points
+- Compute the `NxD` data matrix X with the centered data points as rows, and the `dxd` covariance matrix `C=X.T * X`.
+- Compute the eigendecomposition C = VDV.T
+- Define Vl as the matrix containing the l largest eigenvectors
+- Compute the new datapoints:
+    - View 2: yi = Vl.T*Xi
+    - View 1: zi = Pxi + x with P = VlVl.T
+
+<div align="center">
+<img src="data/pca.png" height="400px" align="center">
+</div>
 
 ## References
 - [Google facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/)
@@ -158,7 +194,7 @@ k(x, y) = (x'y + c)^k where c > 0 and k is a natural number
 - [Wikipedia - Support vector machines](https://de.wikipedia.org/wiki/Support_Vector_Machine)
 - [Uni Tübingen - Statistical Machine Learning Part 16 - Support vector machines: hard and soft margin](https://www.youtube.com/watch?v=0cZwSzsE-UA&list=PL05umP7R6ij2XCvrRzLokX6EoHWaGA2cC&index=18)
 - [Uni Tübingen - Statistical Machine Learning Part 18 - Kernels: definitions and examples](https://www.youtube.com/watch?v=ABOEE3ThPGQ&list=PL05umP7R6ij2XCvrRzLokX6EoHWaGA2cC&index=20)
-- [Statistical Machine Learning Part 25 - Principle Component Analysis](https://www.youtube.com/watch?v=AVSMZI_LZNk&list=PL05umP7R6ij2XCvrRzLokX6EoHWaGA2cC&index=28)
+- [Uni Tübingen - Statistical Machine Learning Part 25 - Principle Component Analysis](https://www.youtube.com/watch?v=AVSMZI_LZNk&list=PL05umP7R6ij2XCvrRzLokX6EoHWaGA2cC&index=28)
 - [StatQuest: Support Vector Machines, Clearly Explained!!!](https://www.youtube.com/watch?v=efR1C6CvhmE)
 - [StatQuest: Support Vector Machines: The Polynomial Kernel](https://www.youtube.com/watch?v=Toet3EiSFcM)
 - [StatQuest: PCA main ideas](https://www.youtube.com/watch?v=HMOI_lkzW08)
