@@ -24,6 +24,11 @@ Happy faces
     <td><img src="data/prediction-happy/21.png"></td>
     <td><img src="data/prediction-happy/23.png"></td>
     <td><img src="data/prediction-happy/25.png"></td>
+    <td><img src="data/prediction-happy/35.png"></td>
+    <td><img src="data/prediction-happy/36.png"></td>
+    <td><img src="data/prediction-happy/40.png"></td>
+    <td><img src="data/prediction-happy/42.png"></td>
+    <td><img src="data/prediction-happy/80.png"></td>
   </tr>
 </table>
 
@@ -36,6 +41,11 @@ Surprised faces
     <td><img src="data/prediction-surprised/4.png"></td>
     <td><img src="data/prediction-surprised/7.png"></td>
     <td><img src="data/prediction-surprised/9.png"></td>
+    <td><img src="data/prediction-surprised/10.png"></td>
+    <td><img src="data/prediction-surprised/11.png"></td>
+    <td><img src="data/prediction-surprised/12.png"></td>
+    <td><img src="data/prediction-surprised/13.png"></td>
+    <td><img src="data/prediction-surprised/14.png"></td>
   </tr>
 </table>
 
