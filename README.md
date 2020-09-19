@@ -158,6 +158,7 @@ k(x, y) = (x'y + c)^k where c > 0 and k is a natural number
 - [Wikipedia - Support vector machines](https://de.wikipedia.org/wiki/Support_Vector_Machine)
 - [Uni Tübingen - Statistical Machine Learning Part 16 - Support vector machines: hard and soft margin](https://www.youtube.com/watch?v=0cZwSzsE-UA&list=PL05umP7R6ij2XCvrRzLokX6EoHWaGA2cC&index=18)
 - [Uni Tübingen - Statistical Machine Learning Part 18 - Kernels: definitions and examples](https://www.youtube.com/watch?v=ABOEE3ThPGQ&list=PL05umP7R6ij2XCvrRzLokX6EoHWaGA2cC&index=20)
+- [Statistical Machine Learning Part 25 - Principle Component Analysis](https://www.youtube.com/watch?v=AVSMZI_LZNk&list=PL05umP7R6ij2XCvrRzLokX6EoHWaGA2cC&index=28)
 - [StatQuest: Support Vector Machines, Clearly Explained!!!](https://www.youtube.com/watch?v=efR1C6CvhmE)
 - [StatQuest: Support Vector Machines: The Polynomial Kernel](https://www.youtube.com/watch?v=Toet3EiSFcM)
 - [StatQuest: PCA main ideas](https://www.youtube.com/watch?v=HMOI_lkzW08)
