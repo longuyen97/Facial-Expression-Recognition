@@ -5,7 +5,6 @@ import org.nd4j.linalg.api.ndarray.INDArray
 import org.nd4j.linalg.factory.Nd4j
 import java.io.File
 import javax.imageio.ImageIO
-import kotlin.math.max
 import kotlin.math.min
 
 /**
@@ -14,7 +13,7 @@ import kotlin.math.min
 class BinaryClassificationDataReader : DataReader {
     private val log = LogManager.getLogger(BinaryClassificationDataReader::class.java)
     private val features = mutableListOf<File>()
-    private val targets = mutableListOf<Int>()
+    private val targets = mutableListOf<Float>()
 
     init {
         val happy = File("data/happy")
@@ -25,9 +24,9 @@ class BinaryClassificationDataReader : DataReader {
         val dataPoints = min(happyFiles.size, surpriseFiles.size)
         for(i in 0 until dataPoints){
             features.add(happyFiles[i])
-            targets.add(1)
+            targets.add(1f)
             features.add(surpriseFiles[i])
-            targets.add(-1)
+            targets.add(-1f)
         }
     }
 
