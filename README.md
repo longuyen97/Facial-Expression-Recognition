@@ -28,3 +28,5 @@ This dataset is intended to aid researchers working on topics related to facial 
 - [StatQuest: PCA main ideas in only 5 minutes!!!](https://www.youtube.com/watch?v=HMOI_lkzW08&ab_channel=StatQuestwithJoshStarmer)
 - [How to Calculate Principal Component Analysis (PCA) from Scratch in Python](https://machinelearningmastery.com/calculate-principal-component-analysis-scratch-python/)
 - [SVM From Scratch](https://towardsdatascience.com/svm-implementation-from-scratch-python-2db2fc52e5c2)
+- [LMU - Support Vector Machines](https://www.dbs.ifi.lmu.de/Lehre/KDD/WS1011/skript/kdd-3-klassifikation7.pdf)
+- [R. Berwick - An idiot's guide to Support Vector Machines](http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf)
