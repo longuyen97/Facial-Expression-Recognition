@@ -56,6 +56,8 @@ does a really good job explain the naive classifier variation. The idea of Hard 
 optimal hyperplane with the largest distance to both classes. The ideal hyperplane in this case has the same distance between
 all two classes; the greatest distance gives the algorithm its robustness against outliers.   
 
+<img src="data/hard-margins.png" align="center">
+
 Assuming the data can be perfectly separated by an ideal hyperplane, then the classifier can take the linear form
 
 ```
@@ -108,8 +110,6 @@ polynomials. But:
 - It is not so obvious which are good basis functions
 - We need to fix the basis before we see the data. This means that we need to have very many basis functions to be flexible, this 
 leads to a very high dimensional representations of our data. 
-
-## Features reduction
 
 #### Principal Component Analysis
 
