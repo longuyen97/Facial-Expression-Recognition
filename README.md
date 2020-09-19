@@ -1,6 +1,35 @@
 # Facial Expression Recognition
 
-### Targets classification
+### Datasets
+
+[CKPLUS](https://www.kaggle.com/shawon10/ckplus) is a lite version of Google's [facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/).
+
+This dataset is a large-scale facial expression dataset consisting of face image triplets along with human annotations that specify which two faces in each triplet form the most similar pair in terms of facial expression. Each triplet in this dataset was annotated by six or more human raters. This dataset is quite different from existing expression datasets that focus mainly on discrete emotion classification or action unit detection.
+
+This dataset is intended to aid researchers working on topics related to facial expression analysis such as expression-based image retrieval, expression-based photo album summarization, emotion classification, expression synthesis, etc.
+
+<table style="width:100%">
+  <tr>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+    <td><img src="data/anger/S022_005_00000032.png"></td>
+  </tr>
+  <tr>
+    <td>anger</td>
+    <td>contempt</td>
+    <td>disgust</td>
+    <td>fear</td>
+    <td>happy</td>
+    <td>sadness</td>
+    <td>surprise</td>
+  </tr>
+</table>
+
+### Implementation details
 
 Assuming we want to classify images between two targets `happy` and `anger`. Assigning images of `happy`with target 1 as well 
 as assigning images of `anger` with target -1. Each pixel of a `48x48` images will be an attribute. An image therefore 
@@ -55,35 +84,6 @@ subject to Yi(<w, Xi> + b) >= 1 - slack{i} for all i = 1,..., n
 ##### K-Mean clustering
 
 ##### Principal Component Analysis
-
-### Datasets
-
-[CKPLUS](https://www.kaggle.com/shawon10/ckplus) is a lite version of Google's [facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/).
-
-This dataset is a large-scale facial expression dataset consisting of face image triplets along with human annotations that specify which two faces in each triplet form the most similar pair in terms of facial expression. Each triplet in this dataset was annotated by six or more human raters. This dataset is quite different from existing expression datasets that focus mainly on discrete emotion classification or action unit detection.
-
-This dataset is intended to aid researchers working on topics related to facial expression analysis such as expression-based image retrieval, expression-based photo album summarization, emotion classification, expression synthesis, etc.
-
-<table style="width:100%">
-  <tr>
-    <th>anger</th>
-    <th>contempt</th>
-    <th>disgust</th>
-    <th>fear</th>
-    <th>happy</th>
-    <th>sadness</th>
-    <th>surprise</th>
-  </tr>
-  <tr>
-    <td><img src="data/anger/S022_005_00000032.png"></td>
-    <td><img src="data/anger/S022_005_00000032.png"></td>
-    <td><img src="data/anger/S022_005_00000032.png"></td>
-    <td><img src="data/anger/S022_005_00000032.png"></td>
-    <td><img src="data/anger/S022_005_00000032.png"></td>
-    <td><img src="data/anger/S022_005_00000032.png"></td>
-    <td><img src="data/anger/S022_005_00000032.png"></td>
-  </tr>
-</table>
 
 ### References
 - [Google facial expression comparison dataset](https://research.google/tools/datasets/google-facial-expression/)
