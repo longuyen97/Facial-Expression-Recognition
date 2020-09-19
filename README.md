@@ -4,7 +4,9 @@ Facial expressions are a form of nonverbal communication between human beings. W
 to avoid involuntary emotions revealing, it could be difficult to control our facial expressions. 
 
 For a long time (and still), it is considered very difficult for machines to classify the emotions displayed on human faces. Many
-approaches were tested (with and without significant success) to extract the facial expression and gather them into categories. 
+approaches were tested (with and without significant success) to extract the facial expression and gather them into categories. A successful
+automation of this problem could lead to many applications in human-computer interaction to improve the fluency, accuracy and naturalness 
+of the interactions.
 
 This repository is an attempt to employ Support Vector Machines and Principal Component Analysis (both come from the field of 
 Statistical Machine Learning) to filter unimportant features and finding important patterns in RGB images of human faces.
